@@ -33,10 +33,9 @@ endif()
 execute_process(
     COMMAND bash ${CAF_basic_project_SOURCE_DIR}/build_caf.sh    
 )
-                   
 
 set(CMAKE_MODULE_PATH ${CAF_basic_project_SOURCE_DIR}/cmake)
-set(CAF_ROOT_DIR ${CAF_basic_project_BINARY_DIR}/external/libcaf)
+set(CAF_ROOT_DIR ${CAF_basic_project_SOURCE_DIR}/external/libcaf/build)
 find_package(CAF COMPONENTS core io)
 
 target_include_directories(executable PRIVATE ${CAF_INCLUDE_DIRS})
